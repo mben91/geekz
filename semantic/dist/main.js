@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var root = '/';
+	var root = '/geekz/';
 
 	$(window).scroll(function() {
 		var top = $(window).scrollTop();
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 	$('#contact-menu').click(function(e) {
 		e.preventDefault();
-		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+		$("html, body").animate({ scrollTop: $(document).height() }, 3000, "easeOutCubic");
 	});
 
 	$('#mobile-contact-menu').click(function(e) {

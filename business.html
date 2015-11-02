@@ -198,11 +198,21 @@
 
 		  </div>
 		  <script type="text/javascript">
-		  	$('.business-heading .link').click(function(e) {
+		  	// $('.business-heading .link').click(function(e) {
+	    	// 	e.preventDefault();
+	    	// 	e.stopPropagation();
+	    	// 	self = $(this);
+	    	// 	$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, 500, "swing");
+	    	// });
+
+	    	var lastindex = 1;
+	    	$('.business-heading .link').click(function(e) {
 	    		e.preventDefault();
 	    		e.stopPropagation();
-	    		self = $(this);
-	    		$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, 100);
+	    		var self = $(this);
+	    		$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
+
+	    		lastindex = self.index();
 	    	});
 		  </script>
 		</div>

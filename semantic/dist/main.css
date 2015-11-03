@@ -1,18 +1,18 @@
 @font-face {
 	font-family: "Century Gothic";
-	src: "fonts/GOTHIC.TTF";
+	src: url('fonts/GOTHIC.TTF');
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Century Gothic";
-	src: "fonts/GOTHICB.TTF";
+	src: url('fonts/GOTHICB.TTF');
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: "Myriad Pro";
-	src: "fonts/MyriadPro-Regular.otf";
+	src: url('fonts/MyriadPro-Regular.otf');
 }
 
 html * {

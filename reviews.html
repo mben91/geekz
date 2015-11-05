@@ -101,7 +101,7 @@
 
 				<br>	
 				<div class="ui column">
-				  <form id="reviews-form" class="ui form" method="POST" action="emailme.php">
+				  <!-- <form id="reviews-form" class="ui form" method="POST" action="emailme.php">
 				  	<h3 class="blue" style="text-align: center; margin-top: 10px !important; font-family: Lato;" ><b>Please share your experience with us. How did we do?</b></h3>
 				  	<br>
 				    <div class="two fields">
@@ -123,7 +123,12 @@
 				      </div>
 				    </div>
 				    <button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
-				  </form>
+				  </form> -->
+				  <button class="md-trigger ui button yellow" data-modal="modal-1">Write a review</button>
+				  
+				  <link href="semantic/dist/modal/component.css" rel="stylesheet">
+				  <script src="semantic/dist/modal/classie.js"></script>
+				  <script src="semantic/dist/modal/modalEffects.js"></script>
 				</div>
 			</div>
 		</div>
@@ -131,3 +136,36 @@
 </div>
 
  
+
+<div class="md-modal md-effect-1" id="modal-1">
+	<div class="md-content">
+		<!-- <h3>Modal Dialog</h3> -->
+		<div>
+			<form id="reviews-form" class="ui form" method="POST" action="emailme.php" style="margin-bottom: 0px">
+			  	<h3 class="blue" style="text-align: center; margin-top: 10px" ><b style="font-family: Lato !important; font-size: 17px;">Please share your experience with us. How did we do?</b></h3>
+			  	<br>
+			    <div class="two fields">
+			      <div class="field">
+			        <!-- <label>Name</label> -->
+			        <input placeholder="Name" name="name" type="text" required>
+			      </div>
+			      <div class="field">
+			      	<!-- <label>Email</label> -->
+				    <input type="email" name="email" placeholder="Email Address" required>
+				  </div>
+			    </div>
+			    <div class="inline field">
+
+			      <div class="field">
+			        <!-- <label>Your Reviews</label> -->
+			        <textarea placeholder="Please share your experience with us. How did we do?" name="message" required ></textarea>
+			        <input type="hidden" name="formType" value="reviews" >
+			      </div>
+			    </div>
+			    <button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
+			    <button class="ui button md-close">CLOSE</button>
+			  </form>
+		</div>
+	</div>
+</div>
+<div class="md-overlay"></div>

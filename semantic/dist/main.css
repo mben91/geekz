@@ -731,3 +731,19 @@ h3.ui.header.yellow {
    color: #444;  
 }
 
+
+
+
+@media only screen and (min-width: 1367px) {
+	.ui.grid.container,
+	.ui.container {
+	    width: calc(1427px + 2rem) !important;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 767px) {
+	.ui.grid.container,
+	.ui.container {
+	    width: 100% !important;
+	}
+}

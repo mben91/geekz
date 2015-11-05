@@ -396,6 +396,12 @@ h3.ui.header.yellow {
     font-family: Lato, "Myriad Pro", Arial !important;
 }
 
+.cd-slider-wrapper .ui.inverted.button:hover {
+    background: #ffd900;
+    color: #0084FF;
+    box-shadow: none !important;
+}
+
 @media screen and (max-width: 766px) {
 	.pushable.layout-switch {
 		position: relative !important;

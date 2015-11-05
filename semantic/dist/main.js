@@ -24,7 +24,10 @@ $(document).ready(function() {
 
 	$('#contact-menu').click(function(e) {
 		e.preventDefault();
-		$("html, body").animate({ scrollTop: $(document).height() }, 3000, "easeOutCubic");
+		$('#container').animate({ opacity:0 }, 400, function() {
+			$("html, body").animate({ scrollTop: $(document).height()-500 }, 1200, "easeOutCubic");
+			$(this).animate({ opacity:1 }, 1500);
+		});
 	});
 
 	$('#mobile-contact-menu').click(function(e) {
@@ -129,6 +132,58 @@ $(document).ready(function() {
 		});
 	});
 
+	$('body').on('click', 'a.about-button', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$.ajax({
+			type: "GET",
+			url: 'about.html',
+			dataType: "html",
+			success: function(response) {
+				container.animate({ opacity:0 }, 400, function() {
+					$(this).html(response)
+					       .animate({ opacity:1 }, 500);
+				});
+
+				history.pushState({}, '', this.url.replace('.html', ''));
+				$('html, body').animate({
+					scrollTop:  ($(window).width() > 766) ? 363 : 335
+				}, 'slow');
+				
+				$('.menu.right .item').removeClass('active');
+				$('.mobilemenu li').removeClass('active');
+				$('.menu.right .item.about').addClass('active');
+				$('.mobilemenu .about-item').addClass('active');
+			}
+		});
+	});
+
+	$('body').on('click', 'a.reviews-button', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$.ajax({
+			type: "GET",
+			url: 'reviews.html',
+			dataType: "html",
+			success: function(response) {
+				container.animate({ opacity:0 }, 400, function() {
+					$(this).html(response)
+					       .animate({ opacity:1 }, 500);
+				});
+
+				history.pushState({}, '', this.url.replace('.html', ''));
+				$('html, body').animate({
+					scrollTop:  ($(window).width() > 766) ? 363 : 335
+				}, 'slow');
+				
+				$('.menu.right .item').removeClass('active');
+				$('.mobilemenu li').removeClass('active');
+				$('.menu.right .item.reviews').addClass('active');
+				$('.mobilemenu .reviews-item').addClass('active');
+			}
+		});
+	});
+
 	$('body').on('click', 'a.services-button', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -141,7 +196,7 @@ $(document).ready(function() {
 				container.animate({ opacity:0 }, 400, function() {
 					$(this).html(response)
 					       .animate({ opacity:1 }, 500, function() {
-					       		if(link.indexOf('#') != -1)
+					       		if(typeof link != "undefined" && link.indexOf('#') != -1)
 					       		$('html, body').animate({ scrollTop : ($(link).offset().top - 135) }, 100);
 					       });
 				});

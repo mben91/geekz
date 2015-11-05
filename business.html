@@ -8,10 +8,11 @@
 		color: #0084FF;
     	font-weight: bold !important;
 		font-size: 19px;
+		font-family: Lato, "Myriad Pro", Arial !important;
 	}
 	.business-heading i {
 		color: #FBBD08;
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.business-heading .sixteen .header.blue {
@@ -85,7 +86,7 @@
 
 		</div>
 		<div class="row customrow">
-		  <div class="sixteen wide column">
+		  <div class="eleven wide column">
 			<!-- <h1 class="ui header blue"><b>We Provide Small & Medium Business IT Solutions</b></h1>
 			<p>Computer Repair Geekz is a valued resource for: Small Businesses, Professional firms and Practices. We bring a new level of Professionalism to DC, Maryland & Virginia IT industry, providing secure Computer networks that are reliable by design and responsive technical support. Whether you are setting up new systems or modifying existing systems, we provide the expertise you need to get the job done right the first time. From simple desktop and server support, to advanced network and security management. We have the right people for the job. We offer a wide range of services to our commercial clients.</p>
 
@@ -197,7 +198,34 @@
 
 
 		  </div>
+		  <div class="five wide column" >
+			<div class="ui sidemenu" >
+		      <div class="ui vertical following fluid accordion text menu">
+		      	<div class="item">
+		      		<h3 class="active title" style="color: #0084ff; font-size: 1.28em;"><b>Business Solutions</b></h3>
+		      		<div class="active content menu">
+		      			<a class="item" href="#rm">Remote Monitoring</a>
+		      			<a class="item" href="#ns">Network Setup</a>
+		      			<a class="item" href="#ss">Server Support</a>
+		      			<a class="item" href="#ws">Wi-Fi Setup</a>
+
+		      		</div>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
 		  <script type="text/javascript">
+		  	$(window).scroll(function() {
+	    		if($(window).scrollTop() > $(window).innerHeight() + 240){
+	    			$('.sidemenu').addClass('fixed');
+	    		} else {
+	    			$('.sidemenu').removeClass('fixed');
+	    		}
+
+	    		if($(window).scrollTop() > ($(document).height() * 3 / 4)) {
+	    			$('.sidemenu').removeClass('fixed');
+	    		}
+	    	});
 		  	// $('.business-heading .link').click(function(e) {
 	    	// 	e.preventDefault();
 	    	// 	e.stopPropagation();
@@ -206,15 +234,27 @@
 	    	// });
 
 	    	var lastindex = 1;
-	    	$('.business-heading .link').click(function(e) {
+	    	$('.sidemenu a, .business-heading .link').click(function(e) {
 	    		e.preventDefault();
 	    		e.stopPropagation();
 	    		var self = $(this);
-	    		$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
 
+	    		$('#container').animate({ opacity:0 }, 400, function() {
+	    			$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
+					$(this).animate({ opacity:1 }, 500);
+				});
+	    		
 	    		lastindex = self.index();
 	    	});
 		  </script>
+		  <style>
+	    	.sidemenu.fixed {
+	    		position: fixed;
+			    width: 280px;
+			    top: 160px;
+	    	}
+	      </style>
+
 		</div>
 	  </div>
 	</div>

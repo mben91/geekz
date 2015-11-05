@@ -10,10 +10,11 @@
 		color: #0084FF;
     	font-weight: bold !important;
 		font-size: 19px;
+		font-family: Lato, "Myriad Pro", Arial !important;
 	}
 	.services-heading i {
 		color: #FBBD08;
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.services-heading .sixteen .header.blue {
@@ -219,7 +220,7 @@
 				<div class="ui sidemenu" >
 			      <div class="ui vertical following fluid accordion text menu">
 			      	<div class="item">
-			      		<h3 class="active title" style="color: #0084ff; font-size: 18px;"><b>Services</b></h3>
+			      		<h3 class="active title" style="color: #0084ff;     font-size: 1.28em;"><b>Our Services</b></h3>
 			      		<div class="active content menu">
 			      			<a class="item" href="#vasr">Virus and Spyware Removal</a>
 			      			<a class="item" href="#drb">Data Recovery & Backup</a>
@@ -267,7 +268,11 @@
 			    		e.preventDefault();
 			    		e.stopPropagation();
 			    		var self = $(this);
-			    		$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
+
+			    		$('#container').animate({ opacity:0 }, 400, function() {
+							$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 135) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
+							$(this).animate({ opacity:1 }, 500);
+						});
 
 			    		lastindex = self.index();
 			    	});

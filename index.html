@@ -44,13 +44,13 @@
 				<div class="ui large six menuholder">
 				  <div class="ui container secondary menu">
 				    <div class="left">
-				    	<img class="ui image logo" src="semantic/dist/images/logo.png">
+				    	<a class="home-button" href="home.html" ><img class="ui image logo" src="semantic/dist/images/logo.png"></a>
 				    </div>
 				    <div class="menu right" style="position: relative" >
 					    <a href="home.html" class="active item"><b>HOME</b></a>
 					    <a href="services.html" class="services item"><b>SERVICES</b></a>
 					    <a href="business.html" class="business item"><b>BUSINESS</b></a>
-					    <a href="about.html" class="about item"><b>ABOUT US</b></a>
+					    <a href="about.html" class="about item"><b>OUR STORY</b></a>
 					    <a href="#" id="contact-menu" class="contact item"><b>CONTACT</b></a>
 					    <a href="reviews.html" class="reviews item"><b>REVIEWS</b></a>
 					    <a class="phoneNbr" style="color: rgb(0, 132, 255);" ><b style="letter-spacing: 2px"><i class="icon phone"></i> 443.535.1483</b></a>
@@ -91,13 +91,13 @@
 						</button>
 				    </div> -->
 
-				    <section class="cd-slider-wrapper slider ">
+				    <section class="cd-slider-wrapper slider animated">
 						<ul class="ui cd-slider autoplay middle aligned stackable grid container" style="padding:0px; margin:0px;">
 							<li class="ui visible row">
 								<div class="ten wide column" style="text-align: right;">
-									<br><br>
+									<br>
 									<h4 class="ui inverted header">
-								      Computer running slow or not turning on?
+								      Computer running slow or not turning on ?
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
@@ -120,9 +120,9 @@
 									<img src="semantic/dist/slider/img/laptop.png" width="70%">
 								</div>
 								<div class="ten wide column" style="text-align: left;">
-									<br><br>
+									<br>
 									<h4 class="ui inverted header">
-								      Laptop or PC Screen went Blue?
+								      Laptop or PC Screen went Blue ?
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
@@ -137,9 +137,9 @@
 
 							<li class="ui row" >
 								<div class="ten wide column" style="text-align: right;">
-									<br><br>
+									<br>
 									<h4 class="ui inverted header">
-								      Have Internet or wireless problems?
+								      iPhone Screen Cracked ?
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
@@ -162,9 +162,9 @@
 									<img src="semantic/dist/slider/img/ipad.png" width="70%">
 								</div>
 								<div class="ten wide column" style="text-align: left;">
-									<br><br>
+									<br>
 									<h4 class="ui inverted header">
-								      Phone or Tablet screen cracked?
+								      Broken Screen of iPad and Tablet ?
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
@@ -326,22 +326,22 @@
 								    <div class="ui two column grid">
 								    	<div class="sixteen wide column item-1" style="font-size: 20px; color: #fff !important; letter-spacing: 1px">
 											<div class="ui list">
-											  <div class="item" style="font-size: 28px; margin-left: 13px;">
+											  <div class="item" style="font-size: 25px; margin-left: 15px;">
 											    <i class="phone icon" style=" color: rgb(255, 225, 53);padding: 0px;"></i>
-											    <div class="content" style="padding-left: 24px;font-family: Lato;">443.535.1483
+											    <div class="content" style="padding-left: 27px;font-family: Lato;">443.535.1483
 											    </div>
 											  </div>
-											  <div class="item breakall" style="margin-left: 18px;font-size: 21px;font-family: Lato;">
+											  <div class="item breakall" style="margin-left: 15px;font-size: 25px;font-family: Lato;">
 											    <i class="mail icon" style=" color: rgb(255, 225, 53);padding: 0px;"></i>
 											    <div class="content" style="padding-left: 14px;">
 											      <a href="mailto:computerrepairgeekz" style="display: inline-block; margin-left: 14px;">Service@ComputerRepairGeekz.com</a>
 											    </div>
 											  </div>
-											  <div class="item" style="margin-left: 19px;margin-top: 5px;">
+											  <!-- <div class="item" style="margin-left: 19px;margin-top: 5px;">
 											    <i class="marker icon" style=" color: rgb(255, 225, 53);padding: 0px;"></i>
 											    <div class="content" style="font-family: Lato;padding-left: 28px;">   Glenelg, MD
 											    </div>
-											  </div>
+											  </div> -->
 											</div>
 								    	</div>
 								    	<div class="sixteen wide column item-1" style="font-size: 17px; color: #fff !important;">
@@ -371,9 +371,9 @@
 											    </div>
 											  </div>
 											</div> -->
-											<div class="social" style="    display: inline-block; margin-left: 68px">
+											<div class="social" style="    display: inline-block; margin-left: 72px">
 												<br>
-												<h2 style="font-family: Lato;">Join With Us</h2>
+												<h2 style="font-family: Lato !important;">Connect With Us</h2>
 												<br>
 												<i class="facebook icon"></i>
 											    <i class="twitter icon"></i>
@@ -406,7 +406,7 @@
 										</div>
 									  </div>
 									  <div class="field ui left corner labeled input">
-									    <select name="hearoptions" class="ui dropdown">
+									    <select name="hearoptions" class="ui dropdown" id="options" >
 									      <option value="">How did you hear about us?</option>
 									      <option value="1">Family/Friend</option>
 									      <option value="2">Facebook</option>
@@ -429,7 +429,7 @@
 									  </div>
 									  <div class="field" style="position: relative" >
 									  	<button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
-									  	<b style="position: absolute; right: 4px; top: 2px; font-weight: normal; font-family: Lato;"><span style="font-size: 19px;font-family: serif; color: red">*</span> Required Fields</b>
+									  	<b style="position: absolute; right: 4px; top: 2px; font-weight: normal; font-family: Lato;"><span style="font-size: 19px;font-family: serif; color: rgb(255, 24, 0); text-shadow: 0px 0px 4px white;">*</span> Required Fields</b>
 									  </div>
 									</form>
 								  </div>

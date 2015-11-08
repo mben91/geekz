@@ -240,16 +240,52 @@ h3.ui.header.yellow {
 	margin-top: 5px;
 }
 
-.sidemenu .item {
-	font-size: 13px !important;
-	color: #000 !important;
+.sidemenu.fixed {
+	position: fixed;
+    width: 326px;
+    top: 140px;
 }
 
-.sidemenu .item:hover,
-.sidemenu .item.active {
-	color: #0084ff !important;
+.sidemenu a.item {
+	position: relative;
+	font-size: 15px !important;
+    color: #000 !important;
+    padding: 4px 6px !important;
+    line-height: 20px !important;
+    font-family: Lato !important;
+    font-size: 18px !important;
+    color: #0084FF !important;
+    margin-bottom: 2px !important;
 }
-    
+
+.sidemenu a.item:hover,
+.sidemenu a.item.active {
+	/*color: #0084ff !important;*/
+	background: #0084FF !important;
+	color: #fff !important;
+}
+
+.sidemenu a.item i {
+	visibility: hidden;
+	position: absolute;
+    margin-left: -60px !important;
+    opacity: 0;
+    font-size: 28px;
+}
+
+.sidemenu a.item:hover i,
+.sidemenu a.item.active i {
+	visibility: visible;
+
+	margin-left: -32px !important;
+    color: #0084FF;
+    opacity: 1;
+
+    transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+}
+
 
 
 /* The Chase -------------------------------------------- */
@@ -745,11 +781,18 @@ h3.ui.header.yellow {
    color: #444;  
 }*/
 
-.srv-container .content-item {
+.srv-container,
+.bus-container {
+	min-height: 80%;
+}
+
+.srv-container .content-item,
+.bus-container .content-item {
 	display: none;
 }
 
-.srv-container .content-item.active {
+.srv-container .content-item.active,
+.bus-container .content-item.active {
 	display: block;
 }
 

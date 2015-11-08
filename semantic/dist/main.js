@@ -46,6 +46,7 @@ $(document).ready(function() {
 	});
 	
 	var container = $('#container');
+	var source    = "home";
 	$('.menu.right .item, .mobilemenu li').click(function(e) {
 		var self = $(this);
 		e.preventDefault();
@@ -63,14 +64,23 @@ $(document).ready(function() {
 				
 				if(this.url.replace('.html', '') == 'home') {
 					history.pushState({}, '', root);
+					
+					$('.cd-slider-wrapper').show();
+					$('html, body').scrollTop(321);
 					$('html, body').animate({
 						scrollTop: 0
 					}, 'slow');
+					source = "home";
 				} else {
 					history.pushState({}, '', this.url.replace('.html', ''));
+					console.log(source);
 					$('html, body').animate({
-						scrollTop: ($(window).width() > 766) ? 328 : 335
-					}, 'slow');
+						scrollTop: ($(window).width() > 766) ? ((source == "home") ? 321 : 0) : 335
+					}, 'slow', function() {
+						$('.cd-slider-wrapper').hide();
+						$('html, body').scrollTop(0);
+					});
+					source = "others";
 				}
 
 				$('.menu.right .item').removeClass('active');
@@ -95,8 +105,11 @@ $(document).ready(function() {
 
 				history.pushState({}, '', this.url.replace('.html', ''));
 				$('html, body').animate({
-					scrollTop:  ($(window).width() > 766) ? 328 : 335
-				}, 'slow');
+					scrollTop:  ($(window).width() > 766) ? 321 : 335
+				}, 'slow', function() {
+					$('.cd-slider-wrapper').hide();
+					$('html, body').scrollTop(0);
+				});
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');
@@ -147,8 +160,11 @@ $(document).ready(function() {
 
 				history.pushState({}, '', this.url.replace('.html', ''));
 				$('html, body').animate({
-					scrollTop:  ($(window).width() > 766) ? 328 : 335
-				}, 'slow');
+					scrollTop:  ($(window).width() > 766) ? 321 : 335
+				}, 'slow', function() {
+					$('.cd-slider-wrapper').hide();
+					$('html, body').scrollTop(0);
+				});
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');
@@ -173,8 +189,11 @@ $(document).ready(function() {
 
 				history.pushState({}, '', this.url.replace('.html', ''));
 				$('html, body').animate({
-					scrollTop:  ($(window).width() > 766) ? 328 : 335
-				}, 'slow');
+					scrollTop:  ($(window).width() > 766) ? 321 : 335
+				}, 'slow', function() {
+					$('.cd-slider-wrapper').hide();
+					$('html, body').scrollTop(0);
+				});
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');
@@ -199,8 +218,11 @@ $(document).ready(function() {
 
 				history.pushState({}, '', this.url.replace('.html', ''));
 				$('html, body').animate({
-					scrollTop:  ($(window).width() > 766) ? 328 : 335
-				}, 'slow');
+					scrollTop:  ($(window).width() > 766) ? 321 : 335
+				}, 'slow', function() {
+					$('.cd-slider-wrapper').hide();
+					$('html, body').scrollTop(0);
+				});
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');
@@ -222,16 +244,22 @@ $(document).ready(function() {
 				container.animate({ opacity:0 }, 400, function() {
 					$(this).html(response)
 					       .animate({ opacity:1 }, 500, function() {
-					       		if(typeof link != "undefined" && link.indexOf('#') != -1)
-					       		$('html, body').animate({ scrollTop : ($(link).offset().top - 135) }, 100);
+					       		if(typeof link != "undefined" && link.indexOf('#') != -1) {
+					       			$('.sidemenu a.item[href=' +link+  ']').trigger('click');
+					       			$('html, body').animate({ scrollTop : ($(link).offset().top - 135) }, 100);
+					       		}
+					       		
 					       });
 				});
 
 
 				history.pushState({}, '', this.url.replace('.html', ''));
 				$('html, body').animate({
-					scrollTop: ($(window).width() > 766) ? 328 : 335
-				}, 'slow');
+					scrollTop: ($(window).width() > 766) ? 321 : 335
+				}, 'slow', function() {
+					$('.cd-slider-wrapper').hide();
+					$('html, body').scrollTop(0);
+				});
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');
@@ -255,8 +283,11 @@ $(document).ready(function() {
 					history.pushState({}, '', '');
 				} else {
 					$('html, body').animate({
-						scrollTop: ($(window).width() > 766) ? 328 : 335
-					}, 'slow');
+						scrollTop: ($(window).width() > 766) ? 321 : 335
+					}, 'slow', function() {
+						$('.cd-slider-wrapper').hide();
+						$('html, body').scrollTop(0);
+					});
 					history.pushState({}, '', this.url.replace('.html', ''));
 				}
 

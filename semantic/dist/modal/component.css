@@ -31,7 +31,7 @@ perspective effects (not including the modals and the overlay).
 	max-width: 630px;
 	min-width: 320px;
 	height: auto;
-	z-index: 2000;
+	z-index: 999;
 	visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -53,7 +53,7 @@ perspective effects (not including the modals and the overlay).
 	visibility: hidden;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 998;
 	opacity: 0;
 	/*background: rgba(143,27,15,0.8);*/
 	background: rgba(255,255,255,0.8);

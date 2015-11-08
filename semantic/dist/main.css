@@ -34,8 +34,9 @@ h1, h2, h3, h4, h5 {
 	margin: 0px  !important;
 }
 
-p, .content {
+p, li, i.right.triangle.icon + .content {
 	font-size: 14px;
+	font-family: Lato, "Myriad Pro" !important;
 }
 
 h3 { font-weight: bold; }
@@ -196,7 +197,7 @@ h3.ui.header.yellow {
 	background: url(images/footercurve.png);
 	height: 124px;
 	z-index: 99999;
-	background-position: 0px 0px;
+	background-position: 0px -1px;
 }
 
 .footer.segment .bluefooter {
@@ -576,7 +577,7 @@ h3.ui.header.yellow {
 	}
 
 	.ui.cd-slider .ui.row .ten.wide.column h1 {
-    	font-size: 26px !important;
+    	font-size: 22px !important;
     	padding: 5px 0px !important;
 	}
 	.ui.cd-slider .ui.row .ten.wide.column h4 {
@@ -630,6 +631,8 @@ h3.ui.header.yellow {
 	}
 
 	iframe.map {
+		margin-top: 0px !important;
+		margin-bottom: 20px !important;
 		height: 320px !important;
 	}
 
@@ -659,8 +662,16 @@ h3.ui.header.yellow {
 		margin: 0px !important;
 	}
 
-	.fullwidth {
+	.ui.grid>[class*="eight wide"].column.fullwidth {
 		width: 100% !important;
+	}
+
+	.footer.segment .customrow {
+		margin-top: 0px;
+	}
+
+	#contact-form {
+		margin-top: 10px !important;
 	}
 	
 }

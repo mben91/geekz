@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5 {
 	margin: 0px  !important;
 }
 
+p, .content {
+	font-size: 14px;
+}
+
 h3 { font-weight: bold; }
 
 h3.blue, h1.blue {
@@ -653,6 +657,10 @@ h3.ui.header.yellow {
 		display: block !important;
 		text-align: center !important;
 		margin: 0px !important;
+	}
+
+	.fullwidth {
+		width: 100% !important;
 	}
 	
 }

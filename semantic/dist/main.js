@@ -51,7 +51,8 @@ $(document).ready(function() {
 		var self = $(this);
 		e.preventDefault();
 		e.stopPropagation();
-		$('.switchmenu').trigger('click');
+		if($(this).hasClass("active")) return false;
+		if ($(window).width() < 766) $('.switchmenu').trigger('click');
 		if($(this).attr('href') != "#")
 		$.ajax({
 			type: "GET",

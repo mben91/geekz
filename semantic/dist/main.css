@@ -662,7 +662,7 @@ h3.ui.header.yellow {
 		margin: 0px !important;
 	}
 
-	.ui.grid>[class*="eight wide"].column.fullwidth {
+	.ui.column.grid>[class*="eight wide"].column.fullwidth {
 		width: 100% !important;
 	}
 

@@ -48,6 +48,11 @@ var ModalEffects = (function() {
 				removeModalHandler();
 			});
 
+			$('.modal-close').click(function( ev ) {
+				ev.stopPropagation();
+				removeModalHandler();
+			});
+
 		} );
 
 	}

@@ -1,15 +1,16 @@
 
 
   <!--------    HERE     -->
-  <div class="ui vertical stripe segment">
+  <div id="reviews" class="ui vertical stripe segment">
 	<div class="ui middle aligned stackable grid container">
 		<div class="row customrow">
 			<div class="column">
-				<h1 class="ui header blue" ><b style="font-family: 'Century Gothic'; !important; font-weight: normal !important; ">Reviews And <b>Comments</b></b></h1>
 				<br>
-				<h2><b style="font-family: Lato;font-size: 22px;color: #0084FF; text-transform: uppercase">Here is what our friends thought about us.</b></h2>
+				<h3 class="ui header yellow">Awesome <b>Clients</b></h3>
+				<br>
+				<h2 class="ui header blue" style="font-size: 24px; text-transform: uppercase">Here is what some of our friends thought about us</h2>
 				
-				<ul class="ui list" style="margin-left: 0px;">
+				<ul class="ui list" style="margin-left: 0px; margin-top: 0px;">
 					<div class="item">
 						<i class="right triangle icon"></i>
 						<div class="content">"You guys are great! I called less than 30 minutes ago and here you are. Fast computer service!"   -John M (Columbia, MD)</div>
@@ -56,7 +57,7 @@
 						<i class="right triangle icon"></i>
 						<div class="content">"I feel great knowing that you are always just a simple phone call away! Thanks for all the wonderful work and you really did speed up my slow computer."   -Gary M (Manassas, VA)</div>
 					</div>
-
+					
 					<div class="item">
 						<i class="right triangle icon"></i>
 						<div class="content">"You guys really took care of my computer and I will recommend to you all of my friends. The computer virus repair service really does work."   -Donte H (Herndon, VA)</div>
@@ -97,8 +98,27 @@
 						<i class="right triangle icon"></i>
 						<div class="content">"You saved me a lot of trouble and money with your laptop repair service."  -Ashley (Washington, DC)</div>
 					</div>
+					<br>
+					<button class="ui button yellow showmore" style="letter-spacing: 1px; color: #0084FF; background: #ffd900">SEE MORE</button>
+					<br><br><br>
+					<h2 class="ui header blue" style="font-size: 24px; text-transform: uppercase">Share your experience with us</h2>
+					<button class="md-trigger ui button yellow" data-modal="modal-1" style="color: #0084FF; background: #ffd900">GIVE YOUR FEEDBACK</button>
 				</ul>
+				<script type="text/javascript">
+					$('.showmore').click(function() {
+						if($('.showmore').hasClass('open')) {
+							$('#reviews .ui.list .item:nth-child(n+7)').slideUp(400);
+							$('.showmore').text('SEE MORE');
+						} else {
+							$('#reviews .ui.list .item:nth-child(n+7)').slideDown(500);
+							$('.showmore').text('SEE LESS');
+						}
+						
 
+						$('.showmore').toggleClass('open');
+					})
+					
+				</script>
 				<br>	
 				<div class="ui column">
 				  <!-- <form id="reviews-form" class="ui form" method="POST" action="emailme.php">
@@ -124,10 +144,8 @@
 				    </div>
 				    <button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
 				  </form> -->
-				  <button class="md-trigger ui button yellow" data-modal="modal-1">Write a review</button>
 				  
-				  <link href="semantic/dist/modal/component.css" rel="stylesheet">
-				  <script src="semantic/dist/modal/classie.js"></script>
+				  
 				  <script src="semantic/dist/modal/modalEffects.js"></script>
 				</div>
 			</div>
@@ -137,33 +155,39 @@
 
  
 
-<div class="md-modal md-effect-1" id="modal-1">
+<div class="md-modal md-effect-1" id="modal-1" >
 	<div class="md-content">
 		<!-- <h3>Modal Dialog</h3> -->
 		<div>
-			<form id="reviews-form" class="ui form" method="POST" action="emailme.php" style="margin-bottom: 0px">
-			  	<h3 class="blue" style="text-align: center; line-height: initial; margin-top: 10px" ><b style="font-family: Lato !important; font-size: 17px;">Please share your experience with us. How did we do?</b></h3>
+			<form id="reviews-form" class="ui form" method="POST" action="emailme.php" style="margin-bottom: 0px; position: relative">
+			  	<!-- <h3 class="blue" style="text-align: center; line-height: initial; margin-top: 10px" ><b style="font-family: Lato !important; font-size: 17px;">How Did We Do?</b></h3> -->
+			  	<h2 class="ui header blue" style="font-size: 24px; text-transform: uppercase; color: #fff !important; padding: 0px !important; letter-spacing: 1px;">How Did We Do ? 
+			  		<span class="md-close" style="position: absolute; right: 5px; top: -5px; color: #e0e1e2; font-size: 25px; cursor: pointer; display: inline-block">
+			  			<i class="angle up icon"></i>
+			  			<i class="angle down icon"></i>
+			  		</span>
+			  	</h2>
 			  	<br>
 			    <div class="two fields">
 			      <div class="field">
 			        <!-- <label>Name</label> -->
-			        <input placeholder="Name" name="name" type="text" required>
+			        <input placeholder="Full Name" name="name" type="text" required>
 			      </div>
 			      <div class="field">
 			      	<!-- <label>Email</label> -->
-				    <input type="email" name="email" placeholder="Email Address" required>
+				    <input type="email" name="email" placeholder="Your Email" required>
 				  </div>
 			    </div>
 			    <div class="inline field">
 
 			      <div class="field">
 			        <!-- <label>Your Reviews</label> -->
-			        <textarea placeholder="Please share your experience with us. How did we do?" name="message" required ></textarea>
+			        <textarea placeholder="Give Your Feedback" name="message" required ></textarea>
 			        <input type="hidden" name="formType" value="reviews" >
 			      </div>
 			    </div>
 			    <button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
-			    <button class="ui button md-close" type="reset">CLOSE</button>
+			    <button class="ui button modal-close" type="reset">CLOSE</button>
 			  </form>
 		</div>
 	</div>

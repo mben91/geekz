@@ -987,3 +987,7 @@ h3.ui.header.yellow {
 	    width: 100% !important;
 	}
 }
+
+.mCSB_dragger_bar {
+    background: #0084FF !important;
+}

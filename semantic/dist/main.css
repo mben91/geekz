@@ -246,9 +246,9 @@ h3.ui.header.yellow {
 }
 
 .sidemenu.fixed {
-	position: fixed;
-    width: 326px;
-    top: 140px;
+	/*position: fixed;
+    width: 28%;
+    top: 140px;*/
 }
 
 .sidemenu a.item {
@@ -529,6 +529,12 @@ h3.ui.header.yellow {
     background: #ffd900;
     color: #0084FF;
     box-shadow: none !important;
+}
+
+.ui.sidemenu.fixed.bottom {
+    /*position: absolute;
+    top: initial;
+    bottom: 0px;*/
 }
 
 @media screen and (max-width: 766px) {

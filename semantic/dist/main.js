@@ -20,6 +20,9 @@ $(document).ready(function() {
 
 	});
 
+	$(".srv-container").mCustomScrollbar({
+	    theme:"dark"
+	});
 	//$('#options').dropdown();
 
 	$('#contact-menu').click(function(e) {

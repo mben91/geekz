@@ -242,6 +242,9 @@
 			
 
 			<script type="text/javascript">
+				
+				
+
 		    	$(window).scroll(function() {
 		    		if($(window).scrollTop() > $(window).innerHeight() - 80){
 		    			$('.sidemenu').addClass('fixed');
@@ -249,8 +252,10 @@
 		    			$('.sidemenu').removeClass('fixed');
 		    		}
 
-		    		if($(window).scrollTop() > ($(document).height() * 3 / 4)) {
-		    			$('.sidemenu').removeClass('fixed');
+		    		if($('.bottomgray').offset().top < $(window).innerHeight() + $(window).scrollTop() - 30) {
+		    			$('.sidemenu').addClass('bottom');
+		    		} else {
+		    			$('.sidemenu').removeClass('bottom');
 		    		}
 		    	});
 
@@ -309,6 +314,13 @@
 					$(this).toggleClass('open');
 				});
 
+		    	if($(window).width() > 766 ) {
+		    		$('.srv-container').css({overflow : 'auto', height : $('.sidemenu').height() - 20 + 'px', minHeight: $('.sidemenu').height() - 20 + 'px', paddingRight : '20px'});
+
+			    	$(".srv-container").mCustomScrollbar({
+					    theme:"dark"
+					});
+				}
 		    </script>
 		</div>
 	</div>

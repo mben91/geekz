@@ -271,7 +271,7 @@
 
 
 			if($(window).width() > 766 ) {
-	    		$('.bus-container').css({overflow : 'auto', height : $('.sidemenu').height() - 20 + 'px', minHeight: $('.sidemenu').height() - 20 + 'px', paddingRight : '20px'});
+	    		$('.bus-container').css({overflow : 'auto', height : $(window).innerHeight() - 240 + 'px', minHeight: $(window).innerHeight() - 240 + 'px', paddingRight : '20px'});
 
 		    	$(".bus-container").mCustomScrollbar({
 				    theme:"dark"

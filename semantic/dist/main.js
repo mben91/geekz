@@ -295,6 +295,8 @@ $(document).ready(function() {
 
 				$('.menu.right .item').removeClass('active');
 				$('.menu.right .item[href="' + this.url +'"]').addClass('active');
+				$('.mobilemenu li').removeClass('active');
+				$('.mobilemenu .' + this.url.replace('.html', '') + '-item').addClass('active');
 			}
 		});
 	}, 3000);

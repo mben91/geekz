@@ -981,10 +981,35 @@ h3.ui.header.yellow {
 	}
 }
 
+@media only screen and (min-width: 1200px) {
+	.row.customrow.services-heading,
+	.row.customrow.business-heading {
+		overflow: visible !important;
+	}
+}
+
 @media only screen and (max-width: 1199px) and (min-width: 767px) {
 	.ui.grid.container,
 	.ui.container {
 	    width: 100% !important;
+	}
+
+
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 767px) {
+	.row.customrow {
+		padding: 50px 20px !important;
+	}
+
+	.menuholder .secondary.menu {
+		padding: 4px 20px;
+	}
+}
+
+@media only screen and (max-width: 950px) and (min-width: 767px) {
+	.ui.secondary.menu .item {
+		font-size: 13px;
 	}
 }
 

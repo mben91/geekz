@@ -1,7 +1,7 @@
 
   <div id="services" class="ui vertical stripe segment" >
 	<div class="ui middle aligned stackable grid container">
-		<div class="row customrow services-heading" style="position: relative">
+		<div class="row customrow services-heading" style="position: relative; overflow: hidden;">
 			<div class="graysquare" style="
 			    position: absolute;
 			    width: 150%;
@@ -288,6 +288,8 @@
 			   		e.stopPropagation();
 		    		var self = $(this);
 
+
+
 		    		$('.sidemenu a').removeClass('active');
 		    		$('.sidemenu a[href=' + self.attr('href') + ']').addClass('active');
 		    		if ($(window).width() < 766) $('.smenu.open').trigger('click');
@@ -297,6 +299,7 @@
 
 			    		$('html, body').animate({ scrollTop : ($(self.attr('href')).offset().top - 160) }, Math.abs(lastindex-self.index())*100 + 500, "easeOutCubic");
 			    		$(this).animate({ opacity:1 }, 500);
+			    		$(".srv-container").mCustomScrollbar("scrollTo", 'top');
 			    	});
 
 			    	lastindex = self.index();

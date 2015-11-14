@@ -56,7 +56,7 @@
 					    <a href="business.html" class="business item"><b>BUSINESS</b></a>
 					    <a href="about.html" class="about item"><b>OUR STORY</b></a>
 					    <!-- <a href="#" id="contact-menu" class="contact item"><b>CONTACT US</b></a> -->
-					    <a href="#" id="contact-menu" class="contact item ui blue button" style="
+					    <a href="#" data-modal="modal-2" class="item ui blue button md-trigger" style="
 						    position: absolute;
 						    top: -48px;
 						    right: 274px;
@@ -385,9 +385,9 @@
 											    </div>
 											  </div>
 											</div> -->
-											<div class="social" style="    display: inline-block; margin-left: 72px">
+											<div class="social" style="    display: inline-block; margin-left: 72px; text-align: center">
 												<br>
-												<h2 style="font-family: Lato !important; display: inline-block; font-size: 25px;">Connect With Us</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="facebook icon"></i>
+												<h2 style="font-family: Lato !important; display: inline-block; font-size: 25px;">Connect With Us</h2><br><i class="facebook icon" style="margin: 0 !important; margin-top: 10px !important;"></i>
 												<br>
 											    <!-- <i class="twitter icon"></i>
 											    <i class="instagram icon"></i>
@@ -486,5 +486,93 @@
 		<a href="#0" class="cd-top">Top</a>
 
 
+
+
+		<div class="md-modal md-effect-1" id="modal-2" >
+			<div class="md-content">
+				<!-- <h3>Modal Dialog</h3> -->
+				<div>
+					<form id="modal-contact-form" class="ui form small" method="POST" action="emailme.php" style="">
+					 
+				  	  <h1 class="ui header inverted" style="font-size: 37px;">Contact <b>Us</b>
+				  	  	<span class="md-close" style="position: absolute; right: 5px; top: -5px; color: #e0e1e2; font-size: 25px; cursor: pointer; display: inline-block">
+				  			<i class="angle up icon"></i>
+				  			<i class="angle down icon"></i>
+				  		</span></h1>
+				  	  <br>
+
+				  	  <div style="display:inline-block; width: 55%;" >
+						  <div class="field ui left corner labeled input">
+						    <input type="text" name="name" placeholder="Full Name" required>
+						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
+								<i class="asterisk icon"></i>
+							</div>
+						  </div>
+						  <div class="field ui left corner labeled input">
+						    <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" name="phone" placeholder="Phone Number (XXX-XXX-XXXX)" required>
+						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
+								<i class="asterisk icon"></i>
+							</div>
+						  </div>
+						  <div class="field ui left corner labeled input">
+						    <input type="email" name="email" placeholder="Your Email" required>
+						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
+								<i class="asterisk icon"></i>
+							</div>
+						  </div>
+						  <div class="field ui left corner labeled input">
+						    <select name="hearoptions" class="ui dropdown" id="options" >
+						      <option value="">How did you hear about us?</option>
+						      <option value="1">Family/Friend</option>
+						      <option value="2">Facebook</option>
+						      <!-- <option value="3">Instagram</option>
+						      <option value="4">Twitter</option>
+						      <option value="5">Google</option> -->
+						      <option value="6">Search Engine</option>
+						      <option value="7">Other</option>
+						    </select>
+						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
+								<i class="asterisk icon"></i>
+							</div>
+						  </div>
+						  <div class="field ui left corner labeled input">
+						    <textarea name="message" placeholder="Tell us how we can help you" style="padding-left: 30px; height: 100px;" required></textarea>
+						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
+								<i class="asterisk icon"></i>
+							</div>
+						    <input type="hidden" name="formType" value="contact" >
+						  </div>
+						  <div class="field" style="position: relative" >
+						  	<button class="ui button yellow" type="submit" style="letter-spacing: 1px" >SUBMIT</button>
+						  	<b style="position: absolute; right: 4px; top: 2px; font-weight: normal; font-family: Lato; color: #fff"><span style="font-size: 19px;font-family: serif; color: rgb(255, 24, 0); text-shadow: 0px 0px 4px white;">*</span> Required Fields</b>
+						  </div>
+					  </div>
+					  <div style="display:inline-block; width: 44%; vertical-align: top;padding: 20px;padding-right: 0px;">
+					  	  <h3 class="ays-m" style="color: white; margin-bottom: 8px !important; font-size: 26px;font-family: Lato !important;opacity: 1;background: none !important;"><span style="font-size: 26px; color: rgb(255, 225, 53); font-family: 'Century Gothic' !important;"><b>24/7 &nbsp;</b></span>At Your Service</h3>
+						  <div class="item pic-m" style="color: #fff;text-align: center;">
+						    <i class="phone icon" style="color: rgb(255, 225, 53);padding: 0px;font-size: 24px;"></i>
+						    <div class="content" style="font-size: 26px; padding-left: 5px; font-family: Lato;display: inline-block;">443.535.1483
+						    </div>
+						  </div>
+						  <br>
+						  <div class="item pic-m" style="color: #fff;text-align: center;">
+						    <br>
+						    <div class="social" style="display: inline-block; ">
+								<br>
+								<h2 style="font-family: Lato !important; display: inline-block; font-size: 26px;">Connect With Us</h2><br><br><i class="facebook icon"></i>
+								<br>
+							    <!-- <i class="twitter icon"></i>
+							    <i class="instagram icon"></i>
+							    <i class="google plus icon"></i> -->
+							</div>
+						  </div>
+						  
+				  	  </div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="md-overlay"></div>
+		<script src="semantic/dist/modal/modalEffects.js"></script> 
 	</body>
 </html>

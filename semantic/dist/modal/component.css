@@ -41,7 +41,9 @@ perspective effects (not including the modals and the overlay).
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 }
-
+.md-modal#modal-2 {
+	width: 630px;
+}
 .md-show {
 	visibility: visible;
 }

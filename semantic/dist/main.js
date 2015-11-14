@@ -51,7 +51,12 @@ $(document).ready(function() {
 		var self = $(this);
 		e.preventDefault();
 		e.stopPropagation();
-		if($(this).hasClass("active")) return false;
+		if($(this).hasClass("active")) {
+			$('html, body').animate({
+				scrollTop: 0
+			});
+			return false;
+		}
 		if ($(window).width() < 766) $('.switchmenu.open').trigger('click');
 		if($(this).attr('href') != "#")
 		$.ajax({
@@ -517,6 +522,23 @@ $(document).ready(function() {
 			success: function(response) {
 				$('.ui.basic.modal').modal('show');
 				$('#contact-form')[0].reset();
+			}
+		});
+
+		return false;
+	});
+
+	$('#modal-contact-form').submit(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var self = $(this);
+		$.ajax({
+			type: "POST",
+			url: 'emailme.php',
+			data: $(this).serialize(),
+			success: function(response) {
+				$('.ui.basic.modal').modal('show');
+				$('#modal-contact-form')[0].reset();
 			}
 		});
 

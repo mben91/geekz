@@ -21,7 +21,18 @@ $(document).ready(function() {
 	});
 
 	//$('#options').dropdown();
-
+	$('.emailpopup')
+		.popup({
+		    inline   : true,
+		    hoverable: true,
+		    position : 'bottom left',
+		    delay: {
+		      show: 300,
+		      hide: 800
+		    }
+		})
+	;
+	
 	$('#contact-menu').click(function(e) {
 		e.preventDefault();
 		$('#container').animate({ opacity:0 }, 400, function() {
@@ -134,15 +145,21 @@ $(document).ready(function() {
 			url: 'home.html',
 			dataType: "html",
 			success: function(response) {
-				container.animate({ opacity:0 }, 400, function() {
-					$(this).html(response)
-					       .animate({ opacity:1 }, 500);
-				});
+				if(source != "home") {
+					container.animate({ opacity:0 }, 400, function() {
+						$(this).html(response)
+						       .animate({ opacity:1 }, 500);
+					});
 
-				history.pushState({}, '', root);
+					history.pushState({}, '', root);
+						
+					$('.cd-slider-wrapper').show();
+					$('html, body').scrollTop(321);
+				}
 				$('html, body').animate({
-					scrollTop:  0
+					scrollTop: 0
 				}, 'slow');
+				source = "home";
 				
 				$('.menu.right .item').removeClass('active');
 				$('.mobilemenu li').removeClass('active');

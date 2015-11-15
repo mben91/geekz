@@ -160,8 +160,8 @@ h3.ui.header.yellow {
 	font-size: 21px !important;
 }
 
-.about-button > div.content,
-.services-button > div.content {
+.about-button button > div.content,
+.services-button button > div.content {
 	margin-right: 1.5em !important;
 }
 
@@ -385,7 +385,7 @@ h3.ui.header.yellow {
 
 .menu.right .phoneNbr {
 	position: absolute;
-	right: 0px;
+	right: 130px;
 	top: 10px;
 	font-size: 28px;
 	padding: 15px;
@@ -599,7 +599,7 @@ h3.ui.header.yellow {
 		padding-top: 0px;
 		text-align: center;
 	    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.3); */
-	    border-bottom: 20px solid #eee;
+	    border-bottom: 2px solid #eee;
 	}
 
 	.mobilemenu li {
@@ -790,7 +790,7 @@ h3.ui.header.yellow {
 	    padding: 0px;
 	}
 
-	.ui.very.relaxed.items .content .services-button {
+	.ui.very.relaxed.items .content > .services-button {
 		display: none !important;
 	}
 

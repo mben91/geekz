@@ -51,15 +51,15 @@
 				    	<a class="home-button" href="home.html" ><img class="ui image logo" src="semantic/dist/images/logo.png"></a>
 				    </div>
 				    <div class="menu right" style="position: relative" >
-					    <a href="home.html" class="active item"><b>HOME</b></a>
+					    <a href="home.html" class="home active item"><b>HOME</b></a>
 					    <a href="services.html" class="services item"><b>SERVICES</b></a>
 					    <a href="business.html" class="business item"><b>BUSINESS</b></a>
 					    <a href="about.html" class="about item"><b>OUR STORY</b></a>
 					    <!-- <a href="#" id="contact-menu" class="contact item"><b>CONTACT US</b></a> -->
 					    <a href="#" data-modal="modal-2" class="item ui blue button md-trigger" style="
 						    position: absolute;
-						    top: -48px;
-						    right: 274px;
+						    top: -46px;
+						    right: 0px;
 						    font-size: 14px;
 						    box-shadow: 0 0 0 2px #0084FF inset!important;
 						"><b>CONTACT US</b></a>
@@ -72,12 +72,12 @@
 				  </div>
 				  <div class="mobileMenuholder" style="display: none">
 					  <ul class="mobilemenu">
-					 	<li class="active" href="home.html">Home</li>
+					 	<li class="home-item active" href="home.html">Home</li>
 						<li class="services-item" href="services.html">Services</li>
-						<li href="business.html">Business</li>
+						<li class="business-item" href="business.html">Business</li>
 						<li class="about-item" href="about.html">Our Story</li>
 						<!-- <li id="mobile-contact-menu" href="#" >Contact Us</li> -->
-						<li href="reviews.html">Reviews</li>
+						<li class="reviews-item" href="reviews.html">Reviews</li>
 					  </ul>
 				  </div>
 				  <div class="phone-mobile" style="display: none">
@@ -115,12 +115,12 @@
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
-							      	<button class="ui animated fade big inverted button" tabindex="0">
-									  <a href="#lnaprs" class="services-button" ><div class="visible content" style="color: #fff">Learn More</div>
+							      	<a href="#lnaprs" class="services-button" ><button class="ui animated fade big inverted button" tabindex="0">
+									  <div class="visible content" style="color: #fff">Learn More</div>
 									  <div class="hidden content">
 									    Learn More
-									  </div></a>
-									</button>
+									  </div>
+									</button></a>
 								</div>
 								<div class="six wide column" style="text-align: left">
 									<br>
@@ -140,12 +140,12 @@
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
-							      	<button class="ui animated fade big inverted button" tabindex="0">
-									  <a href="#lnaprs" class="services-button" ><div class="visible content" style="color: #fff">Learn More</div>
+							      	<a href="#lnaprs" class="services-button" ><button class="ui animated fade big inverted button" tabindex="0">
+									  <div class="visible content" style="color: #fff">Learn More</div>
 									  <div class="hidden content">
 									    Learn More
-									  </div></a>
-									</button>
+									  </div>
+									</button></a>
 								</div>
 							</li>
 
@@ -157,12 +157,12 @@
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
-							      	<button class="ui animated fade big inverted button" tabindex="0">
-									  <a href="#iimr" class="services-button" ><div class="visible content" style="color: #fff">Learn More</div>
+							      	<a href="#iimr" class="services-button" ><button class="ui animated fade big inverted button" tabindex="0">
+									  <div class="visible content" style="color: #fff">Learn More</div>
 									  <div class="hidden content">
 									    Learn More
-									  </div></a>
-									</button>
+									  </div>
+									</button></a>
 								</div>
 								<div class="six wide column" style="text-align: left">
 									<br>
@@ -182,12 +182,12 @@
 								    </h4>
 							     	<h1>Yes, we can fix that!</h1>
 							      	
-							      	<button class="ui animated fade big inverted button" tabindex="0">
-									  <a href="#iimr" class="services-button" ><div class="visible content" style="color: #fff">Learn More</div>
+							      	<a href="#iimr" class="services-button" ><button class="ui animated fade big inverted button" tabindex="0">
+									  <div class="visible content" style="color: #fff">Learn More</div>
 									  <div class="hidden content">
 									    Learn More
-									  </div></a>
-									</button>
+									  </div>
+									</button></a>
 								</div>
 							</li>
 						</ul> <!-- .cd-slider -->
@@ -426,7 +426,10 @@
 									      <!-- <option value="3">Instagram</option>
 									      <option value="4">Twitter</option>
 									      <option value="5">Google</option> -->
-									      <option value="6">Search Engine</option>
+									      <option value="3">Referrals</option>
+									      <option value="4">Local Advertisement</option>
+									      <option value="5">Google Search</option> 
+									      <option value="6">Other Search Engines</option> 
 									      <option value="7">Other</option>
 									    </select>
 									    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
@@ -528,7 +531,10 @@
 						      <!-- <option value="3">Instagram</option>
 						      <option value="4">Twitter</option>
 						      <option value="5">Google</option> -->
-						      <option value="6">Search Engine</option>
+						      <option value="3">Referrals</option>
+						      <option value="4">Local Advertisement</option>
+						      <option value="5">Google Search</option> 
+						      <option value="6">Other Search Engines</option> 
 						      <option value="7">Other</option>
 						    </select>
 						    <div class="ui left corner label" style="font-size: 7px; color: red; border-color: #eee;">
@@ -553,10 +559,13 @@
 						    <i class="phone icon" style="color: rgb(255, 225, 53);padding: 0px;font-size: 24px;"></i>
 						    <div class="content" style="font-size: 26px; padding-left: 5px; font-family: Lato;display: inline-block;">443.535.1483
 						    </div>
+						    <br><br>
+						    <i class="mail icon" style="color: rgb(255, 225, 53);padding: 0px; font-size: 24px;"></i>
+						    <a class="content emailpopup" style="font-size: 26px; padding-left: 5px; font-family: Lato;display: inline-block; color: #fff" data-content="Service@ComputerRepairGeekz.com" data-variation="inverted" href="mailto:Service@ComputerRepairGeekz.com">Email Us
+						    </a>
 						  </div>
 						  <br>
 						  <div class="item pic-m" style="color: #fff;text-align: center;">
-						    <br>
 						    <div class="social" style="display: inline-block; ">
 								<br>
 								<h2 style="font-family: Lato !important; display: inline-block; font-size: 26px;">Connect With Us</h2><br><br><i class="facebook icon"></i>

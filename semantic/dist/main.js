@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var root = '/geekz/';
+	var root = '/';
 
 	$(window).scroll(function() {
 		var top = $(window).scrollTop();

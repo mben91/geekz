@@ -849,6 +849,18 @@ h3.ui.header.yellow {
     	height: 70px !important;
 	}
 
+	#modal-2 {
+		width: 90% !important;
+	}
+
+	#modal-2 .mb-formfields {
+		width: 100% !important;
+	}
+
+	#modal-2 .mb-formtext {
+		display: none !important;
+	}
+
 }
 
 .business-home li {

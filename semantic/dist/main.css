@@ -874,19 +874,26 @@ h3.ui.header.yellow {
     	height: 70px !important;
 	}
 
+	#modal-1 {
+		width: 90% !important;
+	}
+	#modal-1 .md-content > div {
+		padding: 20px !important;
+	}
+    #modal-1 .md-close {
+    	right: 20px !important;
+    }
+
 	#modal-2 {
 		width: 90% !important;
 		display: none;
 	}
-
 	#modal-2 .mb-formfields {
 		width: 100% !important;
 	}
-
 	#modal-2 .mb-formtext {
 		display: none !important;
 	}
-
 	#modal-2 .md-content > div {
 		padding: 20px !important;
 	    padding-bottom: 2px !important;

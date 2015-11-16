@@ -54,7 +54,11 @@
 
 			
 			<script type="text/javascript">
-				$('.business-heading').css('height', ($(window).innerHeight() - 117) + 'px');
+				if($(window).width() > 766 ) {
+					$('.business-heading').css('height', ($(window).innerHeight() - 117) + 'px');
+				} else {
+					$('.business-heading').css('height', ($(window).innerHeight() - 80) + 'px');
+				}
 			</script>
 
 		</div>

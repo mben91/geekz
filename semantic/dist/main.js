@@ -591,5 +591,15 @@ $(document).ready(function() {
 		return false;
 	});
 
+	
+    if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+    	$('select#options').attr('style', 'padding-left: 28px !important;');	
+    	// alert('IE');
+    }   // If Internet Explorer
+    
+    $('form input').click(function(e) {
+    	e.preventDefault();
+    	e.stopPropagation();
+    });
 
 });

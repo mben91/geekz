@@ -25,6 +25,10 @@ var ModalEffects = (function() {
 				if( hasPerspective ) {
 					classie.remove( document.documentElement, 'md-perspective' );
 				}
+
+				setTimeout(function() {
+					$('#modal-2').hide();
+				}, 1000)
 			}
 
 			function removeModalHandler() {
@@ -32,15 +36,19 @@ var ModalEffects = (function() {
 			}
 
 			el.addEventListener( 'click', function( ev ) {
-				classie.add( modal, 'md-show' );
-				overlay.removeEventListener( 'click', removeModalHandler );
-				overlay.addEventListener( 'click', removeModalHandler );
+				$('#modal-2').show();
+				setTimeout(function() {
+					classie.add( modal, 'md-show' );
+					overlay.removeEventListener( 'click', removeModalHandler );
+					overlay.addEventListener( 'click', removeModalHandler );
 
-				if( classie.has( el, 'md-setperspective' ) ) {
-					setTimeout( function() {
-						classie.add( document.documentElement, 'md-perspective' );
-					}, 25 );
-				}
+					if( classie.has( el, 'md-setperspective' ) ) {
+						setTimeout( function() {
+							classie.add( document.documentElement, 'md-perspective' );
+						}, 25 );
+					}
+				}, 100);
+				
 			});
 
 			close.addEventListener( 'click', function( ev ) {

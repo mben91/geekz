@@ -876,6 +876,7 @@ h3.ui.header.yellow {
 
 	#modal-2 {
 		width: 90% !important;
+		display: none;
 	}
 
 	#modal-2 .mb-formfields {
@@ -886,7 +887,7 @@ h3.ui.header.yellow {
 		display: none !important;
 	}
 
-	.md-content > div {
+	#modal-2 .md-content > div {
 		padding: 20px !important;
 	    padding-bottom: 2px !important;
 	    padding-top: 2px !important;

@@ -722,13 +722,13 @@ h3.ui.header.yellow {
 	} 
 	.services-heading .sixteen .header.blue,
 	.business-heading .sixteen .header.blue {
-		padding-bottom: 10px !important;
+		/*padding-bottom: 10px !important;*/
 	}
 
 	.business-heading .sixteen p {
-	    height: 130px;
+	    /*height: 130px;
 	    min-height: 130px;
-	    overflow: auto;
+	    overflow: auto;*/
 	}
 
 	.services-heading.row.customrow,
@@ -739,7 +739,7 @@ h3.ui.header.yellow {
 	.ui.grid >.services-heading.row>.column.link,
 	.ui.grid >.business-heading.row>.column.link {
 		width: 50% !important;
-		padding: 0.6rem!important;
+		/*padding: 0.6rem!important;*/
 	}
 
 	.services-heading .gap {

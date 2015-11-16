@@ -394,9 +394,10 @@ h3.ui.header.yellow {
 
 #options {
 	font-family: Lato !important;
-	padding-left: 28px;
+	/*padding-left: 28px;*/
 	color: #aaa;
 	font-size: 13px;
+	text-indent: 20px;
 }
 
 #options option {
@@ -716,12 +717,18 @@ h3.ui.header.yellow {
 
 	.services-heading,
 	.business-heading {
-		height: auto !important;
+		/*height: auto !important;*/
 		overflow: hidden;
 	} 
 	.services-heading .sixteen .header.blue,
 	.business-heading .sixteen .header.blue {
-		/*padding-bottom: 0px !important;*/
+		padding-bottom: 10px !important;
+	}
+
+	.business-heading .sixteen p {
+	    height: 130px;
+	    min-height: 130px;
+	    overflow: auto;
 	}
 
 	.services-heading.row.customrow,
@@ -732,6 +739,11 @@ h3.ui.header.yellow {
 	.ui.grid >.services-heading.row>.column.link,
 	.ui.grid >.business-heading.row>.column.link {
 		width: 50% !important;
+		padding: 0.6rem!important;
+	}
+
+	.services-heading .gap {
+		display: none !important;
 	}
 
 	.sidemenu.fixed {
@@ -814,7 +826,15 @@ h3.ui.header.yellow {
 		display: block !important;
 		text-align: center !important;
 		margin: 0px !important;
+		margin-top: -6px !important;
 	}
+
+	.social h2 {
+		display: inline-block !important;
+		margin-right: 20px !important;
+	}
+
+	.cd-top { bottom: 0px !important; }
 
 	.ui.column.grid>[class*="eight wide"].column.fullwidth {
 		width: 100% !important;
@@ -844,6 +864,11 @@ h3.ui.header.yellow {
     	margin-top: -10px !important;
 	}
 	.pic-m .content { padding-left: 30px !important }
+
+	.ays-m {
+		margin-top: -16px !important;
+	}
+
 	textarea {
 		min-height: 70px !important;
     	height: 70px !important;
@@ -861,6 +886,20 @@ h3.ui.header.yellow {
 		display: none !important;
 	}
 
+	.md-content > div {
+		padding: 20px !important;
+	    padding-bottom: 2px !important;
+	    padding-top: 2px !important;
+	}
+
+	#modal-contact-form .md-close {
+		right: 25px !important;
+    	top: -4px !important;
+	}
+
+	.mb-formtext-phone {
+		display: inline-block !important;
+	}
 }
 
 .business-home li {

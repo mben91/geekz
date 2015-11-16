@@ -45,7 +45,7 @@
 					<h5>Wi-Fi Networking <br>& Security</h5>
 				</center>
 			</div>
-			<div class="sixteen wide column" style="margin-top: 25px"></div>
+			<div class="sixteen wide column gap" style="margin-top: 25px"></div>
 			<div class="four wide column link" href="#ncs" >
 				<center>
 					<div>
@@ -80,7 +80,12 @@
 			</div>
 
 			<script type="text/javascript">
-				$('.services-heading').css('height', ($(window).innerHeight() - 117) + 'px');
+				
+				if($(window).width() > 766 ) {
+					$('.services-heading').css('height', ($(window).innerHeight() - 117) + 'px');
+				} else {
+					$('.services-heading').css('height', ($(window).innerHeight() - 80) + 'px');
+				}
 			</script>
 
 		</div>

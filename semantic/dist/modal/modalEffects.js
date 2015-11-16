@@ -47,7 +47,7 @@ var ModalEffects = (function() {
 							classie.add( document.documentElement, 'md-perspective' );
 						}, 25 );
 					}
-				}, 100);
+				}, 200);
 				
 			});
 

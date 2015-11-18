@@ -453,6 +453,10 @@ h3.ui.header.yellow {
     /*font-weight: bold !important;*/
 }
 
+.reasons p {
+    padding: 0px 20px;
+}
+
 .services-heading i.icon,
 .business-heading i.icon {
 	font-size: 3em !important;

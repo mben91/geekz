@@ -202,12 +202,3 @@
     	display: none;
 	}
 </style>
-
-<script type="text/javascript">
-	$('form input, form textarea').focus(function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		var insc = $(window).scrollTop();
-		$(window).scrollTop(insc);
-	});
-</script>

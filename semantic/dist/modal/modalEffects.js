@@ -37,7 +37,10 @@ var ModalEffects = (function() {
 			}
 
 			el.addEventListener( 'click', function( ev ) {
-				if($(window).width() < 766)  $("body").css("overflow", "hidden");
+				if($(window).width() < 766) {
+					$('.md-overlay, .md-modal').css('position', 'absolute');
+					$("body").css("overflow", "hidden");
+				} 
 				$('#modal-2').show();
 				setTimeout(function() {
 					classie.add( modal, 'md-show' );

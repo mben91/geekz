@@ -454,7 +454,7 @@ h3.ui.header.yellow {
 }
 
 .reasons p {
-    padding: 0px 20px;
+    /*padding: 0px 20px;*/
 }
 
 .services-heading i.icon,
@@ -911,6 +911,20 @@ h3.ui.header.yellow {
 
 	.mb-formtext-phone {
 		display: inline-block !important;
+	}
+
+	.imgrepair img { margin-left: 0px !important }
+
+	.reasons .ui.stackable.grid>.row>.wide.three.column:not(.sixteen) {
+	    width: 50% !important;
+	}
+
+	.reasons h4 {
+		margin-bottom: 5px !important;
+	}
+
+	.reasons-p {
+		padding: 0px 40px !important;
 	}
 }
 

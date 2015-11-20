@@ -28,7 +28,7 @@ var ModalEffects = (function() {
 
 				setTimeout(function() {
 					$('#modal-2').hide();
-					if($(window).width() < 766)  $("body").css("overflow", "auto");
+					if($(window).width() < 766)  $("html, body").css("overflow", "auto");
 				}, 1000)
 			}
 
@@ -38,7 +38,7 @@ var ModalEffects = (function() {
 
 			el.addEventListener( 'click', function( ev ) {
 				if($(window).width() < 766) {
-					$('.md-overlay, .md-modal').css('position', 'absolute');
+					//$('.md-overlay, .md-modal').css('position', 'absolute');
 					$("html, body").css({overflow:'hidden', height:'100%', width:'100%' });
 				} 
 				$('#modal-2').show();

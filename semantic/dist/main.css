@@ -926,6 +926,15 @@ h3.ui.header.yellow {
 	.reasons-p {
 		padding: 0px 40px !important;
 	}
+
+	.reasons .ui.stackable.grid>.row>.sixteen.wide.column,
+	.reasons .sixteen.wide h3 {
+		padding-bottom: 0px !important;
+	}
+
+	.cd-top {
+		display: none !important;
+	}
 }
 
 .business-home li {

@@ -553,6 +553,10 @@ h3.ui.header.yellow {
     margin-right: -82px;
 }
 
+.ui.popup {
+	max-width: initial !important;
+}
+
 @media screen and (max-width: 766px) {
 	.pushable.layout-switch {
 		position: relative !important;

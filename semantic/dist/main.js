@@ -176,6 +176,7 @@ $(document).ready(function() {
 	$('body').on('click', 'a.business-button', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
+		var link = $(this).attr('href');
 		$.ajax({
 			type: "GET",
 			url: 'business.html',
@@ -183,7 +184,13 @@ $(document).ready(function() {
 			success: function(response) {
 				container.animate({ opacity:0 }, 400, function() {
 					$(this).html(response)
-					       .animate({ opacity:1 }, 500);
+					       .animate({ opacity:1 }, 500, function() {
+					       		if(typeof link != "undefined" && link.indexOf('#') != -1) {
+					       			$('.sidemenu a.item[href=' +link+  ']').trigger('click');
+					       			$('html, body').animate({ scrollTop : ($(link).offset().top - 135) }, 100);
+					       		}
+					       		
+					       });
 				});
 
 				history.pushState({}, '', this.url.replace('.html', ''));

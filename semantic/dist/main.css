@@ -988,10 +988,10 @@ h3.ui.header.yellow {
 .social i.instagram { background-color: #125688; }
 .social i.google    { background-color: #dd4b39; }
 
-.social i.facebook:hover  { color: #3b5998; }
-.social i.twitter:hover   { color: #00aced; }
-.social i.instagram:hover { color: #125688; }
-.social i.google:hover    { color: #dd4b39; }
+.social i.facebook:hover  { color: #3b5998 !important; }
+.social i.twitter:hover   { color: #00aced !important; }
+.social i.instagram:hover { color: #125688 !important; }
+.social i.google:hover    { color: #dd4b39 !important; }
 
 
 .social i:hover {

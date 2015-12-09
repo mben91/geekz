@@ -945,6 +945,46 @@ h3.ui.header.yellow {
 	.cd-top {
 		display: none !important;
 	}
+
+	.ui.column.grid > .business-grid.column {
+		width: 30% !important;
+	}
+	.showonmobile {
+		display: block !important;
+	}
+	.business-grid .very.relaxed.items .item.hidefrommobile {
+		display: none !important;
+	}
+	.ui.column.grid > .imgrepair.column {
+		width: 70% !important;
+	}
+
+	.business-grid .very.relaxed.items .item {
+		width: 100% !important;
+	    display: inline-block !important;
+	    text-align: center;
+	    vertical-align: top;
+	}
+
+	.business-grid .very.relaxed.items .item .header.business-button {
+		margin-top: 10px;
+		line-height: 1.5 !important;
+	}
+
+	.extra-grid {
+		margin-top: -25px;
+	}
+	.extra-grid .very.relaxed.items .item {
+		display: inline-block !important;
+	    vertical-align: top;
+	    width: 25% !important;
+	    text-align: center;
+	}
+
+	.extra-grid .very.relaxed.items .item .header.business-button {
+		margin-top: 10px;
+		line-height: 1.5 !important;
+	}
 }
 
 .business-home li {
